@@ -1,4 +1,4 @@
-# edit-distance
+# id-card
 
 Chinese identification card number verification, including region code, birthday, and check code.
 
@@ -12,7 +12,7 @@ In Cargo.toml add
 
 ```toml
 [dependencies]
-edit-distance = "2.1.0"
+id-card="0.1"
 ```
 
 Then re-run `cargo build`. That fetches the dependencies and builds
@@ -21,9 +21,12 @@ the code.
 ## Usage
 
 ```rust
-extern crate edit_distance;
+extern crate id_card;
 
-edit_distance("kitten", "sitting"); // => 3
+fn main() {
+    println!("{}", id_card::validate("440524188001010014"));//outputs: true
+}
+
 ```
 
 ## Development
