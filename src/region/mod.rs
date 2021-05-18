@@ -4,7 +4,7 @@ mod region_map;
 pub fn validate_code(code: &str) -> bool {
     match region_map::REGION_MAP.get(code) {
         Some(_name) => true,
-        None => false
+        None => false,
     }
 }
 

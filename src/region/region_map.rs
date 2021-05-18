@@ -6339,5 +6339,5 @@ lazy_static! {
         map.insert("820000", "澳门特别行政区");
         map
     };
-    pub static ref REGION_CODES:Vec<&'static str> = REGION_MAP.keys().cloned().collect();
+    pub static ref REGION_CODES: Vec<&'static str> = REGION_MAP.keys().cloned().collect();
 }

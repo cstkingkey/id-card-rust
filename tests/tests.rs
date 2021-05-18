@@ -1,4 +1,4 @@
-extern crate id_card as  id_card_number;
+extern crate id_card as id_card_number;
 
 #[test]
 fn correct_id_card_number() {

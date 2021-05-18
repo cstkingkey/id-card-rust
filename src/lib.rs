@@ -5,8 +5,8 @@ extern crate lazy_static;
 
 mod region;
 
-use regex::Regex;
 use chrono::NaiveDate;
+use regex::Regex;
 
 pub fn validate(id_number: &str) -> bool {
     let id_pattern = Regex::new(r"[1-9][0-9]{14}[0-9]{2}[0-9Xx]").unwrap();
@@ -27,7 +27,10 @@ pub fn validate(id_number: &str) -> bool {
     let mut id_number_string = id_number.to_string();
     let check_code = id_number_string.pop().unwrap();
     //transform the chars except the last to u32
-    let items: Vec<u32> = id_number_string.chars().map(|c| c.to_digit(10).unwrap()).collect();
+    let items: Vec<u32> = id_number_string
+        .chars()
+        .map(|c| c.to_digit(10).unwrap())
+        .collect();
     let factors: [u32; 17] = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
     let mut sum = 0u32;
     for (&x, &y) in items.iter().zip(&factors) {
