@@ -1,0 +1,24 @@
+[package]
+name = "id-card"
+version = "0.1.0"
+authors = ["Ethan Zhang <letian1225@gmail.com>"]
+edition = "2018"
+description = "Chinese id card number verification, including region code, birthday, and check code."
+repository = "https://github.com/Ethan1225/id-card-rust.git"
+documentation = ""
+readme = "README.md"
+keywords = ["id card", "idcard", "id card number", "身份证号码"]
+license = "Apache-2.0"
+include = [
+    "src/lib.rs",
+    "src/region/mod.rs",
+    "src/region/region_map.rs",
+    "tests/*.rs",
+    "Cargo.toml",
+]
+
+[dependencies]
+regex="1"
+lazy_static = "1.4.0"
+rand = "0.8"
+chrono = "0.4"
