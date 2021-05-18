@@ -7,7 +7,7 @@ description = "Chinese id card number verification, including region code, birth
 repository = "https://github.com/Ethan1225/id-card-rust.git"
 documentation = ""
 readme = "README.md"
-keywords = ["idcard", "id-card-number", "身份证号码", "身份证号码验证"]
+keywords = ["idcard", "id-card-number", "identification-number"]
 license = "Apache-2.0"
 include = [
     "src/lib.rs",
