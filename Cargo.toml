@@ -5,7 +5,6 @@ authors = ["Ethan Zhang <letian1225@gmail.com>"]
 edition = "2018"
 description = "Chinese id card number verification, including region code, birthday, and check code."
 repository = "https://github.com/Ethan1225/id-card-rust.git"
-documentation = ""
 readme = "README.md"
 keywords = ["idcard", "id-card-number", "identification", "number"]
 license = "Apache-2.0"
