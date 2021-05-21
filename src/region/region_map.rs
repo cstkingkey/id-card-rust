@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 lazy_static! {
     pub static ref REGION_MAP: HashMap<&'static str, &'static str> = {
-        let mut map = HashMap::new();
+        let mut map = HashMap::with_capacity(6335);
         map.insert("110000", "北京市");
         map.insert("110100", "北京市市辖区");
         map.insert("110101", "北京市东城区");
