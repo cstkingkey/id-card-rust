@@ -1,6 +1,6 @@
 [package]
 name = "id-card"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Ethan Zhang <letian1225@gmail.com>"]
 edition = "2018"
 description = "Chinese identification card number verification, including region code, birthday, and check code."
