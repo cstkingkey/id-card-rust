@@ -31,7 +31,7 @@ fn main() {
 
 ## Development
 
-Test changes before comitting.(Install nightly if it haven't been installed: rustup install nightly)
+Test changes before commitment.(Install nightly if it haven't been installed: rustup install nightly)
 ```shell
 cargo clean
 cargo fmt --all -- --check
