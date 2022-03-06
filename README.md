@@ -24,7 +24,7 @@ the code.
 extern crate id_card;
 
 fn main() {
-    println!("{}", id_card::validate("440524188001010014"));//outputs: true
+    println!("{}", id_card::validate("440524188001010014", true));//outputs: true
 }
 
 ```

@@ -8,14 +8,14 @@ mod region;
 use chrono::NaiveDate;
 use regex::Regex;
 
-pub fn validate(id_number: &str) -> bool {
+pub fn validate(id_number: &str, validate_region: bool) -> bool {
     let id_pattern = Regex::new(r"[1-9][0-9]{14}[0-9]{2}[0-9Xx]").unwrap();
     if id_pattern.is_match(id_number) == false {
         return false;
     }
     //check region code
     // let region_code: String = id_number.chars().take(6).collect();
-    if !region::validate_code(&id_number[0..6]) {
+    if validate_region && !region::validate_code(&id_number[0..6]) {
         return false;
     }
     //check date
