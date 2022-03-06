@@ -1,7 +1,7 @@
 #![feature(test)]
 extern crate test;
 use test::Bencher;
-extern crate id_card as id_card_number;
+extern crate cn_id_card as id_card_number;
 
 
 #[bench]

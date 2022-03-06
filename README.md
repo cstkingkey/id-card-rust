@@ -1,4 +1,6 @@
-# id-card
+Fork of https://github.com/Ethan1225/id-card-rust
+
+# cn-id-card
 
 Chinese identification card number verification, including region code, birthday, and check code.
 
@@ -12,7 +14,7 @@ In Cargo.toml add
 
 ```toml
 [dependencies]
-id-card="0.1"
+cn-id-card="0.1"
 ```
 
 Then re-run `cargo build`. That fetches the dependencies and builds
