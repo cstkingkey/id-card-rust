@@ -23,10 +23,10 @@ the code.
 ## Usage
 
 ```rust
-extern crate id_card;
+extern crate cn_id_card;
 
 fn main() {
-    println!("{}", id_card::validate("440524188001010014", true));//outputs: true
+    println!("{}", cn_id_card::validate("440524188001010014", true));//outputs: true
 }
 
 ```
