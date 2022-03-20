@@ -1,4 +1,4 @@
-mod region_map;
+pub mod region_map;
 
 //check if the region code is valid
 pub fn validate_code(code: &str) -> bool {
