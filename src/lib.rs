@@ -1,8 +1,10 @@
 // #![deny(missing_docs)]
 extern crate regex;
+#[cfg(feature = "region")]
 #[macro_use]
 extern crate lazy_static;
 
+#[cfg(feature = "region")]
 pub mod region;
 
 use chrono::NaiveDate;
@@ -15,9 +17,16 @@ pub fn validate(id_number: &str, validate_region: bool) -> bool {
     }
     //check region code
     // let region_code: String = id_number.chars().take(6).collect();
+    #[cfg(feature = "region")]
     if validate_region && !region::validate_code(&id_number[0..6]) {
         return false;
     }
+
+    #[cfg(not(feature = "region"))]
+    if validate_region {
+        panic!("unsupported. To validate region, enable region feature.");
+    }
+
     //check date
     let birth_date = NaiveDate::parse_from_str(&id_number[6..14], "%Y%m%d");
     if !birth_date.is_ok() {

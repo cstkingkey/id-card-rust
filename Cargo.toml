@@ -1,6 +1,6 @@
 [package]
 name = "cn-id-card"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["cstkingkey <cstkingkey@gmail.com>"]
 edition = "2021"
 description = "Chinese identification card number verification, including region code, birthday, and check code."
@@ -8,16 +8,13 @@ repository = "https://github.com/cstkingkey/id-card-rust.git"
 readme = "README.md"
 keywords = ["idcard", "id-card-number", "identification", "number"]
 license = "Apache-2.0"
-include = [
-    "src/lib.rs",
-    "src/region/mod.rs",
-    "src/region/region_map.rs",
-    "tests/*.rs",
-    "Cargo.toml",
-]
 
 [dependencies]
 regex="1"
-lazy_static = "1.4.0"
+lazy_static = { version = "1.4.0", optional = true }
 #rand = "0.8"
 chrono = "0.4"
+
+[features]
+region = ["lazy_static"]
+default = ["region"]
