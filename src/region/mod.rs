@@ -14,7 +14,7 @@ mod tests {
 
     #[test]
     fn validate_code_test() {
-        assert_eq!(validate_code("640000"), true);
-        assert_eq!(validate_code("649999"), false);
+        assert!(validate_code("640000"));
+        assert!(!validate_code("649999"));
     }
 }

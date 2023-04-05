@@ -1,7 +1,8 @@
 use std::collections::HashMap;
-lazy_static! {
-    pub static ref REGION_MAP: HashMap<&'static str, &'static str> = {
-        let map = HashMap::from([
+
+pub(crate) static REGION_MAP: once_cell::sync::Lazy<HashMap<&'static str, &'static str>> =
+    once_cell::sync::Lazy::new(|| {
+        HashMap::from([
             ("110000", "北京市"),
             ("110100", "北京市市辖区"),
             ("110101", "北京市东城区"),
@@ -6338,8 +6339,8 @@ lazy_static! {
             ("710000", "台湾省"),
             ("810000", "香港特别行政区"),
             ("820000", "澳门特别行政区"),
-        ]);
-        map
-    };
-    pub static ref REGION_CODES: Vec<&'static str> = REGION_MAP.keys().cloned().collect();
-}
+        ])
+    });
+
+pub static REGION_CODES: once_cell::sync::Lazy<Vec<&'static str>> =
+    once_cell::sync::Lazy::new(|| REGION_MAP.keys().cloned().collect());
