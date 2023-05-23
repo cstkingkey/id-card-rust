@@ -29,3 +29,10 @@ fn wrong_region_code() {
 fn wrong_birth_date() {
     assert!(!id_card_number::validate("449994188002290014", true));
 }
+
+#[test]
+fn verify_code() {
+    assert!(id_card_number::validate_code("12100000400009880K", true));
+    assert!(!id_card_number::validate_code("11011519491231002x", true));
+    assert!(!id_card_number::validate("12100100400009880K", true));
+}

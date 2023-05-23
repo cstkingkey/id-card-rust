@@ -2,7 +2,8 @@ Fork of https://github.com/Ethan1225/id-card-rust
 
 # cn-id-card
 
-Chinese identification card number verification, including region code, birthday, and check code.
+Chinese person identification card number verification, including region code, birthday, and check code.
+Chinese unified social credit code verification, including check code only.
 
 ## License
 
@@ -27,6 +28,7 @@ extern crate cn_id_card;
 
 fn main() {
     println!("{}", cn_id_card::validate("440524188001010014", true));//outputs: true
+    println!("{}", cn_id_card::validate_code("12100000400009880K", true));//outputs: true
 }
 
 ```
